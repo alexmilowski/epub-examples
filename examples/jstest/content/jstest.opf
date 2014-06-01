@@ -1,0 +1,15 @@
+<package xmlns="http://www.idpf.org/2007/opf" version="2.0" unique-identifier="pub-id" xml:lang="en">
+   <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <dc:identifier id="pub-id">urn:uuid:A14EDBCD-F3AC-4D52-BF86-8194330043FD</dc:identifier>
+      <dc:title id="title">Javascript Test</dc:title>
+      <dc:language>en</dc:language>
+   </metadata>
+   <manifest>
+     <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+     <item id="test" href="jstest.xhtml" media-type="application/xhtml+xml"/>
+     <item id="script" href="jstest.js" media-type="text/javascript"/>
+   </manifest>
+   <spine toc="ncx">
+     <itemref idref="test"/>
+   </spine>
+</package>

@@ -1,0 +1,35 @@
+<project name="epubs" default="epubs" basedir=".">
+ <description>Builds epubs</description>
+
+<property name="output.dir" location="."/>
+
+<target name="epubs">
+   <antcall target="package-epub">
+      <param name="epub.dir" location="jstest"/>
+      <param name="epub.name" value="jstest.epub"/>
+   </antcall>
+   <antcall target="package-epub">
+      <param name="epub.dir" location="fraction-assessment"/>
+      <param name="epub.name" value="fraction-assessment.epub"/>
+   </antcall>
+ </target>
+
+ <target name="package-epub">
+   <property name="output.file" location="${output.dir}/${epub.name}"/>
+   <echo message="EPub directory: ${epub.dir}" />
+   <echo message="output: ${output.file}" />
+   <delete file="${output.file}"/>
+   <zip destfile="${output.file}">
+      <fileset dir="${epub.dir}">
+         <include name="mimetype"/>
+      </fileset>
+      <fileset dir="${epub.dir}">
+         <include name="META-INF/**"/>
+      </fileset>
+      <fileset dir="${epub.dir}">
+         <include name="content/**"/>
+      </fileset>
+   </zip>
+ </target>
+
+</project>

@@ -1,0 +1,38 @@
+<html xmlns="http://www.w3.org/1999/xhtml" profile="http://www.idpf.org/epub/30/profile/content/">
+<head>
+<title>Javascript Test</title>
+<style type="text/css">
+.testing {
+   text-align: center;
+   vertical-align: middle;
+   margin-right: 0.5em;
+   padding: 0.2em;
+   background-color: grey;
+   min-width: 100px;
+}
+.good {
+   text-align: center;
+   vertical-align: middle;
+   margin-right: 0.5em;
+   padding: 0.2em;
+   background-color: green;
+   min-width: 100px;
+}
+.bad {
+   text-align: center;
+   vertical-align: middle;
+   margin-right: 0.5em;
+   padding: 0.2em;
+   background-color: red;
+   min-width: 100px;
+}
+</style>
+<script type="text/javascript" src="jstest.js"></script>
+</head>
+<body>
+<div id='jsworking' class="testing"><p>JS Enabled</p></div>
+<div id='requests' class="testing"><p>XMLHttpRequest</p></div>
+<div id='links' class="testing"><p>Dynamically created links.</p></div>
+<script type="text/javascript">runTests();</script>
+</body>
+</html>
